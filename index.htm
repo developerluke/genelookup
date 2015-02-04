@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/lookup.css" title="lookup"/>
+    <link rel="stylesheet" href="css/docs.min.css" title="lookup"/>
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/bootstrap.js"></script>
+</head>
+
+<body>
+
+    <div class="container" style="width:800px;">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Plugin Home</a></li>
+            <li role="presentation"><a href="mailto:developerluke@gmail.com">Contact</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">GeneLookup.info</h3>
+      </div>
+
+      <div>
+        <h1>GeneLookup.js</h1>
+        <p class="lead">Genelookup.js is a JQuery plugin for searching and building lists of genes. Use this plugin to populate HTML text area inputs with lists of gene identifiers. GeneLookup.js is powered by the <a href="#" target="blank">Mygene.info gene annotation web service</a>. </p>
+        
+        <div class="row">
+        	<div class="col-md-12">
+            	<h5>Textarea Element:</h5>
+        		<div class="col-md-6"><textarea class="form-control" placeholder="Click 'lookup' to find genes"></textarea></div>
+            </div>
+            <div class="col-md-12">
+             <h5>Code:</h5>
+        <div class="col-md-6">
+        	<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">"#mytextarea"</span><span class="p">).</span><span class="nx">lookup</span><span class="p">(</span><span class="s1"></span><span class="p">);</span></code></pre></div>
+        </div>
+            </div>
+            <div class="col-md-12">
+             <h5>Result:</h5>
+        	<div class="col-md-6"><textarea class="form-control" placeholder="Click 'lookup' to find genes" id="mytextarea"></textarea></div>
+            </div>
+        </div>
+        <br><br><br>
+  
+        <p><a class="btn btn-md btn-info" href="#" role="button">Download from Github</a></p>
+      </div>
+<br /><br /><br />
+     <!-- <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Subheading</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Subheading</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        </div>
+      </div>-->
+
+      <footer class="footer">
+        <p>© Genelookup 2015</p>
+      </footer>
+
+    </div> <!-- /container -->
+<script src="javascript/lookup.js"></script>
+<script>
+   $(document).ready(function() {
+	    $("#mytextarea").lookup({
+        "Queryfields" : "name",
+        "Limit" : 200,
+        "Separator": ", ",
+        "Species": "human",
+        "additionalParams" : {
+            "from" : 2,
+            "sort" : "symbol"
+        }
+    });
+   });
+</script>
+</body>
+</html>
